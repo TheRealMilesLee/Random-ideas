@@ -22,8 +22,12 @@ body {
     background-color: #1e1e1e; /* Dark body background */
 }
 
-.h1, .h2 {
-    color: #fff;
+.h1 {
+    color: #fff; /* White color for h1 */
+}
+
+.h2 {
+    color: #ddd; /* Light gray color for h2 */
 }
 
 .p {
@@ -61,4 +65,10 @@ body {
     .skill-category {
         flex-basis: 100%;
     }
+}
+
+/* Additional Styles */
+.h2 i {
+    margin-right: 10px;
+    color: #61dafb; /* React Blue, you can customize the color */
 }
