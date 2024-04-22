@@ -25,6 +25,9 @@ void generateSubsets(vector<int> &S, vector<int> &subset, int index)
 {
   for (size_t loop = 0; loop < S.size(); loop++)
   {
-    cout << S[loop] << " ";
+    for (size_t i = 0; i < subset.size(); i++)
+    {
+      cout << subset[i] << " ";
+    } 
   }
 }
