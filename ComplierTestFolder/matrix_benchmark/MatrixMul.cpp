@@ -58,7 +58,7 @@ int main()
   double seconds_para =
       static_cast<double>(duration_para.count()) / 1000000.0;
 
-  cout << "Matrix multiplication time with single thread: " << seconds_para
+  cout << "Matrix multiplication time with multi thread: " << seconds_para
        << " seconds or " << duration_para.count() % 1000000 << " microseconds"
        << endl;
   return 0;
