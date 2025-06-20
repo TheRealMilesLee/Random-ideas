@@ -194,8 +194,27 @@ def generate_html_report(results, output_file):
 
 
 def main():
-  output_file = sys.argv[1] if len(
-      sys.argv) > 1 else 'performance_report.html'
+  # 解析命令行参数
+  if len(sys.argv) > 1:
+    if sys.argv[1] in ['-h', '--help']:
+      print("矩阵乘法性能测试报告生成器")
+      print("用法: python3 report_generator.py [模式] [输出文件]")
+      print("模式:")
+      print("  fast    - 快速测试 (512, 1024, 2048)")
+      print("  full    - 完整测试 (512-8192)")
+      print("  custom  - 自定义测试")
+      print("示例:")
+      print("  python3 report_generator.py fast report.html")
+      print("  python3 report_generator.py full detailed_report.html")
+      sys.exit(0)
+
+    mode = sys.argv[1] if sys.argv[1] in ['fast', 'full', 'custom'
+                                          ] else 'full'
+    output_file = sys.argv[2] if len(
+        sys.argv) > 2 else f'performance_report_{mode}.html'
+  else:
+    mode = 'full'
+    output_file = 'performance_report.html'
 
   # 查找程序可执行文件
   program_candidates = [
@@ -219,11 +238,59 @@ def main():
     sys.exit(1)
 
   print(f"使用程序: {program_path}")
+  print(f"测试模式: {mode}")
   print("正在运行性能测试...")
 
-  # 测试配置
-  test_configs = [['-s', '512', '-i', '3'], ['-s', '1024', '-i', '3'],
-                  ['-s', '2048', '-i', '1']]
+  # 根据模式选择测试配置
+  if mode == 'fast':
+    # 快速测试 - 适合快速验证
+    test_configs = [
+        ['-s', '512', '-i', '3'],  # 512x512, 3次迭代
+        ['-s', '1024', '-i', '3'],  # 1024x1024, 3次迭代
+        ['-s', '2048', '-i', '1'],  # 2048x2048, 1次迭代
+    ]
+    print("快速测试配置: 512, 1024, 2048")
+
+  elif mode == 'custom':
+    # 自定义测试 - 交互式选择
+    print("自定义测试配置:")
+    sizes = input("请输入矩阵大小 (用空格分隔, 例如: 512 1024 2048): ").split()
+    iterations = input("请输入迭代次数 (默认3): ").strip() or "3"
+
+    test_configs = []
+    for size in sizes:
+      try:
+        s = int(size)
+        if s >= 128:  # 最小支持128
+          test_configs.append(['-s', str(s), '-i', iterations])
+      except ValueError:
+        print(f"跳过无效大小: {size}")
+
+    if not test_configs:
+      print("没有有效的测试配置，使用默认配置")
+      test_configs = [['-s', '1024', '-i', '3']]
+
+  else:  # mode == 'full'
+    # 完整测试配置 - 从512到8192的完整测试套件
+    test_configs = [
+        # 小规模测试 - 多次迭代确保精度
+        ['-s', '512', '-i', '5'],  # 512x512, 5次迭代
+        ['-s', '1024', '-i', '5'],  # 1024x1024, 5次迭代
+
+        # 中等规模测试 - 平衡精度和时间
+        ['-s', '1536', '-i', '3'],  # 1536x1536, 3次迭代
+        ['-s', '2048', '-i', '3'],  # 2048x2048, 3次迭代
+        ['-s', '2560', '-i', '2'],  # 2560x2560, 2次迭代
+        ['-s', '3072', '-i', '2'],  # 3072x3072, 2次迭代
+
+        # 大规模测试 - 单次测试节省时间
+        ['-s', '4096', '-i', '1'],  # 4096x4096, 1次迭代
+        ['-s', '5120', '-i', '1'],  # 5120x5120, 1次迭代
+        ['-s', '6144', '-i', '1'],  # 6144x6144, 1次迭代
+        ['-s', '7168', '-i', '1'],  # 7168x7168, 1次迭代
+        ['-s', '8192', '-i', '1'],  # 8192x8192, 1次迭代
+    ]
+    print("完整测试配置: 512-8192 (11个测试点)")
 
   results = {'system_info': get_system_info(), 'benchmarks': []}
 
