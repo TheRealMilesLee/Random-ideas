@@ -1,155 +1,120 @@
-# Project Overview
-This repository contains a collection of code projects and resources across multiple programming languages and domains, including:
-- **Python** (371 files)
-- **Objective-C** (195 files)
-- **C/C++** (119 header files + 21 C files + 16 C++ files)
-- **Swift** (8 files)
-- **Machine Learning** (TensorFlow/Keras, OpenCV, image datasets)
-- **iOS Development** (Xcode projects, UIKit, SwiftUI)
-- **Algorithm Implementations** (sorting, searching, data structures)
-- **Utilities/Tools** (scripts, encryption, image processing)
----
-## 📁 Project Structure
-├── Python相关/                # Python projects and scripts
-├── Swift学习/                 # iOS/macOS Swift projects
-├── Tensorflow与Keras相关/     # ML frameworks and models
-├── Objective-C_Study/         # Objective-C examples and tutorials
-├── OpenCV/                    # Computer vision projects
-├── SpamFilter/                # Spam filtering algorithms
-├── TabularAlgorithm/          # Table-based algorithms
-├── Tree/                      # Tree data structure implementations
-├── 电影彩蛋/                  # Movie Easter Egg projects
-├── 路由器固件相关/            # Router firmware analysis tools
-└── ... (other directories)
----
-## 📚 Key Components
-### 🔧 Programming Languages
-- **Python**: 371 files (scripts, data analysis, ML)
-- **Objective-C**: 195 files (iOS/macOS apps, UIKit)
-- **C/C++**: 119 header files + 21 C files + 16 C++ files
-- **Swift**: 8 files (iOS/macOS apps)
-- **Other**: JSON, Markdown, config files
-### 🧠 Machine Learning
-- TensorFlow/Keras models
-- OpenCV image processing pipelines
-- Satellite image datasets (8+ folders)
-### 📱 iOS Development
-- Xcode projects (`.xcodeproj`, `.xcworkspace`)
-- SwiftUI/UIKit examples
-- Debugging tools (`.xcscheme`, `.xcuserstate`)
-### 🧪 Algorithms & Tools
-- Sorting/searching algorithms
-- Encryption utilities (XOR cipher, Caesar cipher)
-- File/directory operations
-- Command-line tools (binwalk, scripts)
----
-## 📁 File Types & Counts
-| File Type       | Count |
-|-----------------|-------|
-| `.png`          | 471   |
-| `.py`           | 371   |
-| `.m`            | 195   |
-| `.h`            | 119   |
-| `.jpg`          | 84    |
-| `.plist`        | 70    |
-| `.pbxproj`      | 61    |
-| `.xcscheme`     | 44    |
-| `.1`            | 42    |
-| `.xcworkspacedata` | 40 |
-| `.xcuserstate`  | 26    |
-| `.icns`         | 23    |
-| `.json`         | 21    |
-| `.c`            | 21    |
-| `.cpp`          | 16    |
-| `.md`           | 15    |
-| `.sample`       | 14    |
-| `.txt`          | 13    |
-| `.swift`        | 8     |
-| `.xcsettings`   | 6     |
----
-## 📌 Important Files
-- **README.md** (this file)
-- **readme.md** (alternate README)
-- **.gitignore** (version control configuration)
-- **Key Examples**: 
-  - `Adder.cpp`, `FindSubsets.cpp`, `hello-world.cpp`
-  - `ContentView.js`, `forge.config.js`
-  - `Calculator.xcodeproj`, `Concentraction.xcodeproj`
----
-## 🚀 Setup Instructions
-### Python Environment
-```bash
-pip install -r requirements.txt
-### iOS Projects
-- Open `.xcodeproj` files in Xcode
-- Configure schemes in `.xcscheme` files
-### Machine Learning
-- Install TensorFlow/Keras dependencies
-- Use `pip install tensorflow` or `conda install -c conda-forge tensorflow`
----
-## 📝 Notes
-- The project contains a mix of academic examples, practical tools, and experimental code.
-- Some files (e.g., `.1`, `.sample`) may be placeholders or legacy artifacts.
-- Always check `.gitignore` for excluded files when committing changes.
----
-## 🤝 Contributions
-Feel free to contribute improvements, bug fixes, or new examples!  
-Please follow the project's coding standards and update the README as needed.
-
----
-
-## 中文版本
-
-# 项目概览
-本项目包含多语言开发资源，涵盖Python、Objective-C、C/C++等技术栈，包含算法实现、机器学习示例、iOS开发模板及图像处理工具。
-## 目录结构
+# Coding Projects Collection
+## Description
+This repository contains a diverse collection of coding projects spanning multiple programming languages and domains. It includes:
+- **Python** scripts for machine learning, computer vision, algorithms, and more
+- **Objective-C** projects with Xcode workspace files
+- **C/C++** examples and implementations
+- **Swift** projects with Xcode integration
+- **TensorFlow/Keras** machine learning models
+- **OpenCV** computer vision projects
+- **Algorithm implementations** and data structures
+## Project Structure
 ├── Python相关
 │   ├── Fun_Code
 │   ├── Python_CookBook
 │   ├── Python下的凯撒加密
 │   └── TensorFlow图片学习
 ├── Objective-C_Study
-│   └── 知乎专栏
+│   ├── 知乎专栏
+│   └── RetainCount
 ├── Swift学习
 │   ├── Calculator
 │   └── Concentraction
 ├── OpenCV
 ├── Tensorflow与Keras相关
 ├── Tree
+├── 电影彩蛋
 ├── 路由器固件相关
-└── 其他
-## 文件类型统计
-| 文件类型 | 数量 |
-|---------|-----|
-| `.png` | 471 |
-| `.py` | 371 |
-| `.m` | 195 |
-| `.h` | 119 |
-| `.jpg` | 84 |
-| `.plist` | 70 |
-| `.pbxproj` | 61 |
-| `.xcscheme` | 44 |
-| `.xcworkspacedata` | 40 |
-| `.xcuserstate` | 26 |
-| `.icns` | 23 |
-| `.json` | 21 |
-| `.c` | 21 |
-| `.cpp` | 16 |
-| `.md` | 15 |
-| `.txt` | 13 |
-| `.swift` | 8 |
-| `.xcsettings` | 6 |
-## 重要文件
-- `README.md`：项目主说明文件
-- `readme.md`：备用说明文档
+└── Other directories
+## Important Files
+- `.gitignore` - Version control configuration
+- `Adder.cpp` - C++ example
+- `FindSubsets.cpp` - Algorithm implementation
+- `hello-world.cpp` - C++ starter file
+- `hw0q4.cpp` - C++ assignment
+- `invariant.c` - C programming example
+- `matrixMultiply.cpp` - C++ matrix operations
+- `SimpleRecursive.cpp` - Recursive algorithm
+- `ContentView.js` - JavaScript component
+- `forge.config.js` - Configuration file
+## File Types
+| File Type        | Count |
+|------------------|-------|
+| `.py`            | 371   |
+| `.m`             | 195   |
+| `.h`             | 119   |
+| `.c`             | 21    |
+| `.cpp`           | 16    |
+| `.plist`         | 70    |
+| `.pbxproj`       | 61    |
+| `.xcscheme`      | 44    |
+| `.xcworkspacedata` | 40  |
+| `.xcuserstate`   | 26    |
+## Contributing
+We welcome contributions! Please:
+1. Check existing issues
+2. Create a new issue for feature requests
+3. Submit pull requests with clear descriptions
+## License
+This project is licensed under the [MIT License](LICENSE) - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 中文版本
+
+# 项目 README
+## 📌 项目简介
+本仓库包含多语言开发项目集合，涵盖 **Python**、**Objective-C**、**C/C++** 等技术栈，涉及机器学习、iOS开发、算法实现、图像处理等方向。主要包含以下内容：
+- Python 机器学习/图像处理项目
+- iOS (Objective-C) 应用开发
+- C/C++ 算法实现
+- 深度学习模型与数据集
+- 路由器固件分析工具
+## 📁 目录结构
+├── Python相关          # Python 项目集合
+├── Swift学习           # iOS 开发项目
+├── Tensorflow与Keras相关 # 深度学习项目
+├── OpenCV              # 计算机视觉项目
+├── Objective-C_Study   # Objective-C 学习资料
+├── SpamFilter          # 过滤系统项目
+├── TabularAlgorithm    # 表格算法项目
+├── 电影彩蛋            # 影视相关资源
+└── 路由器固件相关      # 固件分析工具
+## 📊 文件统计
+| 类型         | 数量 |
+|--------------|------|
+| `.py`        | 371  |
+| `.m`         | 195  |
+| `.h`         | 119  |
+| `.c`         | 21   |
+| `.cpp`       | 16   |
+| `.png`       | 471  |
+| `.jpg`       | 84   |
+| `.plist`     | 70   |
+| `.pbxproj`   | 61   |
+| `.xcscheme`  | 44   |
+## 🔑 重要文件
 - `.gitignore`：版本控制忽略配置
-- `Adder.cpp`：示例C++实现
-- `hello-world.cpp`：C++入门示例
-- `ContentView.js`：前端组件文件
-## 技术栈
-- 🐍 Python (371 files)
-- 🍎 Objective-C (195 files)
-- 🧾 C/C++/Objective-C Header (119 files)
-- 🧮 算法实现 (包含排序、查找等)
-- 🤖 机器学习框架 (TensorFlow/Keras)
-- 📱 iOS开发模板 (Xcode项目结构)
+- `Adder.cpp` / `FindSubsets.cpp`：C++ 算法实现示例
+- `ContentView.js`：前端界面文件
+- `forge.config.js`：构建配置文件
+- `hw0q4.cpp` / `matrixMultiply.cpp`：C++ 矩阵运算示例
+- `SimpleRecursive.cpp`：递归算法演示
+## 🛠 技术栈
+- **Python**：机器学习、图像处理、脚本开发
+- **Objective-C**：iOS 应用开发
+- **C/C++**：底层算法实现
+- **TensorFlow/Keras**：深度学习模型
+- **Xcode**：iOS 项目开发工具
+- **OpenCV**：计算机视觉处理
+## 📚 使用指南
+1. Python 项目需安装依赖库（见各子项目 README）
+2. iOS 项目需 Xcode 14+ 编译
+3. C/C++ 项目需 GCC/Clang 编译器
+4. 深度学习模型需 GPU 环境支持
+## 🤝 贡献指南
+- 请先阅读对应子项目的 README
+- 提交 issue 时请注明项目名称和问题类型
+- Pull Request 需包含单元测试和文档更新
+--- 
+*注：项目包含大量图像资源和开发工具，建议按目录结构分模块开发*
